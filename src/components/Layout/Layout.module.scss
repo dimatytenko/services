@@ -1,0 +1,42 @@
+@import "../../scss/vars";
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+
+  & .main {
+    position: relative;
+    flex-grow: 1;
+    cursor: move;
+  }
+}
+
+.header {
+  position: fixed;
+  z-index: 20;
+  width: 100%;
+  background-color: $greyLight;
+  padding: 24px 24px 0;
+
+  & .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 24px;
+    border-bottom: 1px solid $greyDark;
+
+    & .title {
+      color: $blackFont;
+      text-transform: capitalize;
+      font-size: 18px;
+    }
+  }
+}
+
+.right_side {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}

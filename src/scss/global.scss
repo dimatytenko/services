@@ -1,0 +1,40 @@
+@import "../scss/vars.scss";
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  color: $whiteFont;
+  background-color: $greyLight;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+#root {
+  height: 100%;
+}

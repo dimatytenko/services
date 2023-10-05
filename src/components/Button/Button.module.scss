@@ -1,0 +1,68 @@
+@import "../../scss/vars";
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 12px;
+  border-radius: 4px;
+  background-color: $white;
+  color: $greyDark;
+  border: 1px solid $white;
+  transition: all $transition;
+
+  &:hover {
+    background-color: $greyDark;
+    color: $white;
+    border-color: $greyDark;
+  }
+  &.disabled {
+    cursor: not-allowed;
+  }
+  &.roundType {
+    border-radius: 50%;
+    padding: 2px;
+    background-color: $greyDark;
+    color: $white;
+    border-color: $greyDark;
+
+    &:hover {
+      background-color: $white;
+      color: $greyDark;
+      border-color: $white;
+    }
+  }
+  &.redStyle {
+    background-color: $alert;
+    color: $white;
+    border-color: $alert;
+
+    &:hover {
+      background-color: $white;
+      color: $alert;
+      border-color: $white;
+    }
+  }
+  &.yellowStyle {
+    background-color: $yellow;
+    color: $white;
+    border-color: $yellow;
+
+    &:hover {
+      background-color: $white;
+      color: $yellow;
+      border-color: $white;
+    }
+  }
+  &.greenStyle {
+    background-color: $green;
+    color: $white;
+    border-color: $green;
+
+    &:hover {
+      background-color: $white;
+      color: $green;
+      border-color: $white;
+    }
+  }
+}

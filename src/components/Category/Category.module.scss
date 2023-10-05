@@ -1,0 +1,77 @@
+@import "../../scss/vars";
+
+.categories_list {
+  display: flex;
+  gap: 16px;
+
+  &.active {
+    position: relative;
+    padding-top: 15px;
+  }
+  &.active::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-image: linear-gradient(
+      to right,
+      transparent 0%,
+      black 50%,
+      transparent 100%
+    );
+  }
+
+  & .item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 15px;
+
+    & .label {
+      padding: 6px 12px;
+      background-color: $white;
+      color: $blackFont;
+      border-radius: 4px;
+      max-width: 120px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: $whiteFont;
+    }
+    & .item_mark {
+      position: relative;
+      &.active_top::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 1px;
+        height: 50%;
+        background-color: $greyFont;
+      }
+      &.active_bottom::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 1px;
+        height: 50%;
+        background-color: $greyFont;
+      }
+    }
+  }
+  & .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+  }
+  & .input {
+    width: 120px;
+    padding: 6px 12px;
+  }
+}
